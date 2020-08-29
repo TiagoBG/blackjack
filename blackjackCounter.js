@@ -5,7 +5,7 @@ var table = espacio.getContext("2d");
 
 var mesa = {
     url: "blackjackTable.jpg",
-    loaded: false
+    cargaOK: false
 }
 
 
