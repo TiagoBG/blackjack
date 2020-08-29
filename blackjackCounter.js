@@ -27,25 +27,25 @@ var card1;
 var card2;
 
 var cards = [{
-        url: "2-pica.jpg",
+        url: "/imagenes/2-pica.jpg",
         value: 2
     }, {
-        url: "3-pica.jpg",
+        url: "/imagenes/3-pica.jpg",
         value: 3
     }, {
-        url: "4-pica.jpg",
+        url: "/imagenes/4-pica.jpg",
         value: 4
     }, {
-        url: "5-pica.jpg",
+        url: "/imagenes/5-pica.jpg",
         value: 5
     }, {
-        url: "6-pica.jpg",
+        url: "/imagenes/6-pica.jpg",
         value: 6
     }, {
-        url: "7-pica.jpg",
+        url: "/imagenes/7-pica.jpg",
         value: 7
     }, {
-        url: "8-pica.jpg",
+        url: "/imagenes/8-pica.jpg",
         value: 8
     },
     "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
