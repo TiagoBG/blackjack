@@ -87,6 +87,7 @@ var player1 = [cards[Math.floor(Math.random(0, 11) * cards.length)], cards[Math.
 var player1Card1 = player1[0].value;
 var player1Card2 = player1[1].value;
 
+console.log(player1Card1, player1Card2);
 
 function cargarJuego() {
     mesa.cargaOK = true;
@@ -94,27 +95,22 @@ function cargarJuego() {
     if (mesa.cargaOK == true) {
         table.drawImage(mesa.imagen, 0, 0);
     }
-    player1[0].cargaOK = true;
-    player1[1].cargaOK = true;
 
-    console.log(player1[0].cargaOK, player1[1].cargaOK);
-    console.log(player1[0].value, player1[1].value);
-
-    if (cards.carga) {
-
-    }
+    /*if (player1Card1 == "J") {
+        cardFound1.cargaOK = true;
+        console.log(cardFound1);
+    }*/
 }
 
 
 //ASIGNACIÓN DE PUNTOS
 if (player1Card1 == "J" || player1Card1 == "Q" || player1Card1 == "K") {
-    card1 = 10;
 
     //find
     var cardFound1 = player1.find(function(item) {
         return item.value == "J"
     });
-    console.log(cardFound1);
+
     var cardFound1 = player1.find(function(item) {
         return item.value == "K"
     });
@@ -123,11 +119,11 @@ if (player1Card1 == "J" || player1Card1 == "Q" || player1Card1 == "K") {
         return item.value == "Q"
     });
     console.log(cardFound1);
+
+    card1 = 10;
 }
 
 if (player1Card2 == "J" || player1Card2 == "Q" || player1Card2 == "K") {
-    card2 = 10;
-
     //find
     var cardFound1 = player1.find(function(item) {
         return item.value == "J"
@@ -141,6 +137,8 @@ if (player1Card2 == "J" || player1Card2 == "Q" || player1Card2 == "K") {
         return item.value == "Q"
     });
     console.log(cardFound1);
+
+    card2 = 10;
 }
 
 if (player1[0].value <= 10 && player1[0].value >= 2) {
