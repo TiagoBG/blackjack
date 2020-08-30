@@ -82,9 +82,11 @@ cards.imagen.addEventListener("load", cargarJuego);*/
 
 
 //BARAJAR Y REPARTIR CARTAS
-var player1 = [cards[Math.floor(Math.random(0, 11) * 13)], cards[Math.floor(Math.random(0, 11) * 13)]];
+var player1 = [cards[Math.floor(Math.random(0, 11) * cards.length)], cards[Math.floor(Math.random(0, 11) * cards.length)]];
 
-console.log(player1[0].cargaOK, player1[1].cargaOK);
+var player1Card1 = player1[0].value;
+var player1Card2 = player1[1].value;
+
 
 function cargarJuego() {
     mesa.cargaOK = true;
@@ -104,14 +106,41 @@ function cargarJuego() {
 }
 
 
-
 //ASIGNACIÓN DE PUNTOS
-if (player1[0].value == "J" || player1[0].value == "Q" || player1[0].value == "K") {
+if (player1Card1 == "J" || player1Card1 == "Q" || player1Card1 == "K") {
     card1 = 10;
+
+    //find
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "J"
+    });
+    console.log(cardFound1);
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "K"
+    });
+    console.log(cardFound1);
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "Q"
+    });
+    console.log(cardFound1);
 }
 
-if (player1[1].value == "J" || player1[1].value == "Q" || player1[1].value == "K") {
+if (player1Card2 == "J" || player1Card2 == "Q" || player1Card2 == "K") {
     card2 = 10;
+
+    //find
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "J"
+    });
+    console.log(cardFound1);
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "K"
+    });
+    console.log(cardFound1);
+    var cardFound1 = player1.find(function(item) {
+        return item.value == "Q"
+    });
+    console.log(cardFound1);
 }
 
 if (player1[0].value <= 10 && player1[0].value >= 2) {
@@ -130,7 +159,8 @@ if (player1[1].value == "A") {
     card2 = 11;
 }
 var sum = card1 + card2;
-document.write("PLAYER 1 has this cards: " + player1[0].value + " and " + player1[1].value + ". That means you have: " + card1 + " + " + card2 + " (" + sum + ") points");
+var result = `PLAYER 1 has this cards: ${player1[0].value} and  ${player1[1].value}. That means you have: ${card1} + ${card2} (${sum}) points`;
+document.write(result);
 
 
 //LÓGICA DEL JUEGO BLACKJACK
